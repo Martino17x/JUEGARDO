@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  h1 {
+    margin-bottom: 1rem;
+  }
+  
+  .tablero {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  
+  .carta {
+    width: 100px;
+    height: 100px;
+    background-color: #444;
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 0.5rem;
+    transition: 0.3s;
+  }
+  
+  .carta.revelada {
+    background-color: #fff;
+    color: #000;
+    cursor: default;
+  }
+  
+  #mensaje {
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  #reiniciar {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 0.3rem;
+  }
+  
