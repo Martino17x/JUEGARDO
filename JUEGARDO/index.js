@@ -9,6 +9,9 @@ let bloqueo = false;
 let tiempo = 0;
 let intervalo = null;
 
+let puntaje = 0; // Inicializar el puntaje
+let movimientos = 0; // Inicializar el contador de movimientos
+
 function mezclar(array) {
   return array.sort(() => 0.5 - Math.random());
 }
@@ -30,7 +33,10 @@ function crearTablero() {
     tablero.appendChild(carta);
   });
 
-  iniciarTemporizador();  // Iniciamos el temporizador al reiniciar el juego
+  iniciarTemporizador();  // Iniciar el temporizador cuando se reinicia el juego
+  actualizarPuntaje();  // Mostrar el puntaje inicial
+  movimientos = 0;
+  puntaje = 0;
 }
 
 function manejarClick(e) {
@@ -49,6 +55,8 @@ function manejarClick(e) {
       carta2.classList.add('revelada');
       cartasVolteadas = [];
       bloqueo = false;
+      puntaje += 10; // Acierto: +10 puntos
+      actualizarPuntaje(); // Actualizamos el puntaje
       verificarGanador();
     } else {
       setTimeout(() => {
@@ -56,6 +64,8 @@ function manejarClick(e) {
         ocultarCarta(carta2);
         cartasVolteadas = [];
         bloqueo = false;
+        puntaje -= 5; // Fallo: -5 puntos
+        actualizarPuntaje(); // Actualizamos el puntaje
       }, 1000);
     }
   }
@@ -97,6 +107,11 @@ function detenerTemporizador() {
   clearInterval(intervalo);
 }
 
+function actualizarPuntaje() {
+  document.getElementById('puntaje').textContent = puntaje;
+}
+
 btnReiniciar.addEventListener('click', crearTablero);
 
 crearTablero(); // Inicializar al cargar
+
