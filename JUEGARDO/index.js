@@ -6,6 +6,9 @@ let cartas = ['🍎', '🍌', '🍇', '🍉', '🍎', '🍌', '🍇', '🍉'];
 let cartasVolteadas = [];
 let bloqueo = false;
 
+let tiempo = 0;
+let intervalo = null;
+
 function mezclar(array) {
   return array.sort(() => 0.5 - Math.random());
 }
@@ -26,6 +29,8 @@ function crearTablero() {
     carta.addEventListener('click', manejarClick);
     tablero.appendChild(carta);
   });
+
+  iniciarTemporizador();  // Iniciamos el temporizador al reiniciar el juego
 }
 
 function manejarClick(e) {
@@ -75,7 +80,21 @@ function verificarGanador() {
 
   if (todasReveladas) {
     mensaje.textContent = '¡Ganaste! 🎉';
+    detenerTemporizador();  // Detener el temporizador cuando el jugador gana
   }
+}
+
+function iniciarTemporizador() {
+  tiempo = 0;
+  document.getElementById('tiempo').textContent = tiempo;
+  intervalo = setInterval(() => {
+    tiempo++;
+    document.getElementById('tiempo').textContent = tiempo;
+  }, 1000);
+}
+
+function detenerTemporizador() {
+  clearInterval(intervalo);
 }
 
 btnReiniciar.addEventListener('click', crearTablero);
