@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pac-Man Juego</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="startScreen">
+        <h1>Bienvenido a Pac-Man</h1>
+        <input type="text" id="playerName" placeholder="Ingresa tu nombre">
+        <button onclick="startGame()">Jugar</button>
+    </div>
+    
+    <div id="gameContainer" style="display: none;">
+        <h2 id="score">Puntuación: 0</h2>
+        <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
