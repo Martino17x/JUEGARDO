@@ -2,20 +2,31 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Memorama Futbolero</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menú de Juegos</title>
   <link rel="stylesheet" href="index.css" />
 </head>
 <body>
-  <h1>🔥 Memorama Épico 🔥</h1>
-  <div class="tablero" id="tablero"></div>
-  <p id="mensaje"></p>
-  <button id="reiniciar">Reiniciar</button>
 
-  <div id="pantallaVictoria" class="victoria-oculta">
-    <img src="img/victoria.png" alt="¡Ganaste!" class="img-victoria" />
-  </div>
+  <nav>
+    <div class="nav-left">Juegos</div>
+    <div class="nav-right" onclick="toggleDropdown()">
+      <div class="user-icon"></div>
+      <div class="dropdown" id="userDropdown">
+        <a href="#">Loguearte</a>
+      </div>
+    </div>
+  </nav>
 
-  <script src="index.js"></script>
+  <section class="games-section">
+    <h2>Juegos</h2>
+    <div class="cards">
+      <a class="card" href="packman.html">Packman</a>
+      <a class="card" href="flappybird.html">Flappy Bird</a>
+      <a class="card" href="tateti.html">Tateti</a>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
