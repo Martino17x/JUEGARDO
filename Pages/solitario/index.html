@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Solitario Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="controls">
+        <button onclick="reiniciarJuego()">Reiniciar</button>
+        <span>Movimientos: <span id="movimientos">0</span></span>
+        <span>Tiempo: <span id="tiempo">00:00</span></span>
+    </div>
+
+    <div id="game-board">
+        <div id="deck-area">
+            <div id="deck"></div>
+            <div id="waste"></div>
+        </div>
+        <div id="foundations">
+            <div class="foundation"></div>
+            <div class="foundation"></div>
+            <div class="foundation"></div>
+            <div class="foundation"></div>
+        </div>
+        <div id="tableau">
+            <div class="tableau"></div>
+            <div class="tableau"></div>
+            <div class="tableau"></div>
+            <div class="tableau"></div>
+            <div class="tableau"></div>
+            <div class="tableau"></div>
+            <div class="tableau"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
