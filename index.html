@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menú de Juegos</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="nav-left">Juegos</div>
+    <div class="nav-right" onclick="toggleDropdown()">
+      <div class="user-icon"></div>
+      <div class="dropdown" id="userDropdown">
+        <a href="#">Loguearte</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="games-section">
+    <h2>Juegos</h2>
+    <div class="cards">
+      <a class="card" href="/Pages/packman/index.html">Packman</a>
+      <a class="card" href="/Pages/Flappy-bird/index.html">Flappy Bird</a>
+      <a class="card" href="tateti.html">Tateti</a>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+body {
+    text-align: center;
+    background-color: black;
+    color: yellow;
+    font-family: Arial, sans-serif;
+}
+
+#gameCanvas {
+    background-color: #000;
+    border: 2px solid yellow;
+}
+
+#startScreen {
+    margin-top: 50px;
+}
+
+button {
+    background-color: yellow;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}

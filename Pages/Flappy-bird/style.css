@@ -1,0 +1,12 @@
+
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #87CEEB; /* Cielo azul claro */
+}
+
+canvas {
+    display: block;
+    margin: 0 auto;
+    background-color: #87CEEB;
+}
